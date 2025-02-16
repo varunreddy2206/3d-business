@@ -37,7 +37,7 @@ export class CustomizationFormComponent {
     await this.firestoreService.saveBusinessCard(cardId, cardData);
     
     // Generate QR Code linking to the saved card
-    const qrData = `http://localhost:4200/view-card/${cardId}`;
+    const qrData = `https://3d-business.vercel.app/view-card/${cardId}`;
     QRCode.toDataURL(qrData, (err, url) => {
       if (err) console.error(err);
       this.qrCodeUrl = url;
