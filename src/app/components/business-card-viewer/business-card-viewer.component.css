@@ -1,52 +1,89 @@
 .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 220px;
-  }
-  
-  .business-card {
-    width: 360px;
-    height: 200px;
-    border-radius: 10px;
-    display: flex;
-    padding: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    margin-top: 500px;
-  }
-  
-  /* Logo Section */
-  .logo-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo {
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 8px;
-    background: white;
-    padding: 5px;
-  }
-  
-  /* Details Section */
-  .details-section {
-    flex: 2;
-    padding-left: 15px;
-  }
-  
-  .name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .info {
-    font-size: 14px;
-    margin: 3px 0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, #1e1e1e, #333); /* Modern background */
+}
+
+.business-card {
+  width: 380px;
+  height: 220px;
+  border-radius: 12px;
+  display: flex;
+  padding: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.business-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Decorative Element */
+.business-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Logo Section */
+.logo-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  background: white;
+  padding: 6px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Section */
+.details-section {
+  flex: 2;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name Styling */
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Contact Info */
+.info {
+  font-size: 14px;
+  margin: 3px 0;
+  opacity: 0.9;
+}
+
+/* Subtle Underline Effect */
+.info::before {
+  content: "• ";
+  color: rgba(255, 255, 255, 0.6);
+}
